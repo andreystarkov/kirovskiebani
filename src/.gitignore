@@ -1,0 +1,14 @@
+sftp-config.json
+css/all.css
+js/dist/all.js
+content*.php
+archive.php
+author.php
+comments.php
+404.php
+rtl.css
+style.css
+tag.php
+single.php
+languages/
+inc/

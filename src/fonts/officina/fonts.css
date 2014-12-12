@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'OfficinaSerifBoldC';
+	src: url('fonts/OfficinaSerifBoldC.eot');
+	src: local('☺'), url('fonts/OfficinaSerifBoldC.woff') format('woff'), url('fonts/OfficinaSerifBoldC.ttf') format('truetype'), url('fonts/OfficinaSerifBoldC.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
