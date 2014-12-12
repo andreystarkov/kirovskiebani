@@ -13,12 +13,14 @@
  */
 
 get_header(); ?>
+   <header id="slider-wrapper" class="large-header main-header">
 
-   <header id="slider-wrapper" class="large-header">
         <div class="logo"><h1>Кировские бани</h1></div>
 
         <div id="nice-slider" class="nice-slider nice-slider-fullwidth">
+
         <ul class="itemwrap">
+
             <li class="current">
                 <div class="slider-caption caption-current">
                   <div class="wrp">
@@ -27,6 +29,7 @@ get_header(); ?>
                 </div>
                 <img src="<? echo get_template_directory_uri(); ?>/images/slides/fasad.jpg" alt="">
             </li>
+
             <li>
                 <div class="slider-caption">
                   <div class="wrp">
@@ -35,6 +38,7 @@ get_header(); ?>
                 </div>
                 <img src="<? echo get_template_directory_uri(); ?>/images/slides/hall1.jpg" alt="">
             </li>
+
             <li>
                 <div class="slider-caption">
                   <div class="wrp">
@@ -53,10 +57,12 @@ get_header(); ?>
                 <img src="<? echo get_template_directory_uri(); ?>/images/slides/5.jpg" alt="">
             </li>
         </ul>
+
         <nav>
             <a class="prev" href="#"><i class="fa fa-angle-left"></i></a>
             <a class="next" href="#"><i class="fa fa-angle-right"></i></a>
         </nav>
+
         </div>
     </header>
 
@@ -161,7 +167,7 @@ get_header(); ?>
                 </div>
             </div>
         </header>
-        <div class="container text-right" id="box-sauna">
+        <div class="container text-right" id="box-etc">
             <div class="text">
                     <p>Так вы всегда можете заказать дополнительные услуги, которые оказывают "Кировские бани" своим любимым посетителям. К ним относятся парикмахерская, магазин, закусочная, мойка тела и душ "Шарко".</p>
             </div>

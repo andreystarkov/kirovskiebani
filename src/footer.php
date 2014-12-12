@@ -56,7 +56,7 @@
                     large: {
                         media: '(max-width: 1280px)',
                         href: '<? echo get_template_directory_uri(); ?>/css/responsive/style-large.css',
-                        containers: 960, grid: { gutters: ['1.5em', 0] }, viewport: { scalable: false }
+                        containers: 1100, grid: { gutters: ['1.5em', 0] }, viewport: { scalable: false }
                     },
                     medium: {
                         media: '(max-width: 980px)',

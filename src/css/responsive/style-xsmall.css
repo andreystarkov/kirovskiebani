@@ -12,3 +12,8 @@
 #navPanel ul li a, #navPanel ul li .dropDown { font-size: 17px;}
 .section-header h2, .section-header .overlay { font-size: 65px; display: block;}
 section header .buttons { max-width: 100%; width: 100%; text-align:center; margin-top: 20px;}
+#nice-slider { height: 420px !important;}
+.nice-slider nav .next i, .nice-slider nav .prev i { font-size: 60px;}
+footer { height: 250px; }
+footer nav { left: 0; right: 0; bottom: 50px; width: 95%;}
+footer nav a {display: inline-block; margin: 6px;}

@@ -51,7 +51,7 @@
 }
 
 .ip-loader {
-	top: 15%;
+	top: 8%;
 }
 
 .ip-header .ip-inner {
@@ -283,7 +283,7 @@
 }
 
 .no-js .ip-header .ip-logo {
-	margin-top: 20px;
+	margin-top: 0px;
 	height: 180px;
 	opacity: 1;
 	-webkit-transform: none;

@@ -43,12 +43,13 @@ $(function() {
     var wow = new WOW({boxClass: 'wow', animateClass:'animated', offset: 0, mobile: false, live: true});
 
     wow.init();
+    var effects = ["bounceIn", "bounceInLeft","bounceInRight", "bounceInUp"];
 
-    var effects = ["bounceIn", "bounceInDown","bounceInLeft","bounceInRight", "bounceInUp",
-    "fadeInDown", "fadeInLeft","fadeInUp", "fadeInRight", "flipInX",  "fadeInUpBig",
-    "flipInX", "flipInY", "rollIn", "zoomIn","zoomInDown", "zoomInLeft", "zoomInRight"];
+  //  var effects = ["bounceIn", "bounceInDown","bounceInLeft","bounceInRight", "bounceInUp",
+   // "fadeInDown", "fadeInLeft","fadeInUp", "fadeInRight", "flipInX",  "fadeInUpBig",
+   // "flipInX", "flipInY", "rollIn", "zoomIn","zoomInDown", "zoomInLeft", "zoomInRight"];
 
-    $('.container a, .container p, .container h2, .container h1, header h1, header h2, container p, .fun').each(function(){
+    $('.container a, .container p, .container h2, .container h1, header h1, header h2, container p, .fun, .text table').each(function(){
       var effect = effects[rand(0,effects.length-1)];
       $(this).addClass('wow '+effect);
     });
@@ -63,7 +64,7 @@ $(function() {
         $bgobj.css({ backgroundPosition: coords });
       });
     });
-
-//$('.nice-slider').css({height: $(window).height()});
+   $('#skel-layers-hiddenWrapper').css({'height': '0'});
+   $('.main-header #nice-slider').css({height: $(window).height()});
 
 });

@@ -25,7 +25,7 @@ $(function() {
         navNext = nav.querySelector( '.next' ),
         navPrev = nav.querySelector( '.prev' ),
         isAnimating = false,
-        rotateTime = 8000;
+        rotateTime = 12000;
 
         var effects = ["fxSoftScale", "fxSnapIn","fxLetMeIn","fxStickIt","fxArchiveMe","fxVGrowth", "fxSlideBehind","fxSoftPulse", "fxCliffDiving", "fxPressAway"];
         var rotateInterval = setInterval(function(){autoInterval()},rotateTime);

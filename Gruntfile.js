@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
-  var optipng = require('imagemin-optipng');
-  var jpegtran = require('imagemin-jpegtran');
+ // var optipng = require('imagemin-optipng');
+ // var jpegtran = require('imagemin-jpegtran');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -23,26 +23,13 @@ module.exports = function(grunt) {
             'src/css/all.css': ['src/css/*.css']
           }
         }
-      },
-    imagemin: {
-        dynamic: {
-          options: {
-            use: [optipng({ optimizationLevel: 3 }), jpegtran({ progressive: true })]
-          },
-          files: [{
-            expand: true,
-            cwd: 'src/images/',
-            src: ['**/*.{png,jpg,gif}'],
-            dest: 'dist/images'
-          }]
-        }
-    }
+      }
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
+ // grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['uglify', 'cssmin', 'imagemin']);
+  grunt.registerTask('default', ['uglify', 'cssmin']);
 
 };

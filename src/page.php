@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <header id="slider-wrapper" class="large-header">
         <div class="logo"><h1>Кировские бани</h1></div>
-        <div id="nice-slider" class="nice-slider nice-slider-fullwidth" style="height: 500px">
+        <div id="nice-slider" class="nice-slider nice-slider-fullwidth" style="height: 420px">
             <ul class="itemwrap">
                 <li class="current"><img src="<? echo get_template_directory_uri(); ?>/images/inner/1.jpg" alt=""></li>
                 <li><img src="<? echo get_template_directory_uri(); ?>/images/inner/3.jpg" alt=""></li>

@@ -13,10 +13,18 @@
         <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/officina/fonts.css">
         <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/agora/italic.css">
         <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/agora/normal.css">
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/all.css">
-<!--
-        <link rel="stylesheet/less" type="text/css" href="<? echo get_template_directory_uri(); ?>/css/fullwidth-slider.less" />
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/normalize.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/skeleton.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/lightbox.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/animate.min.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/loader-effect-1.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/main.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/fullwidth-slider.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/styles.css">
+
+      <!--  <link rel="stylesheet/less" type="text/css" href="<? echo get_template_directory_uri(); ?>/css/fullwidth-slider.less" />
         <link rel="stylesheet/less" type="text/css" href="<? echo get_template_directory_uri(); ?>/css/styles.less" /> -->
+
         <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/lineicons/style.css">
 
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -25,17 +33,13 @@
         <script src="<? echo get_template_directory_uri(); ?>/js/vendor/less.min.js"></script>
         <script src="<? echo get_template_directory_uri(); ?>/js/vendor/respond.min.js"></script>
         <style>
-
-@import "http://webfonts.ru/import/corki.css";
-@import "http://webfonts.ru/import/robotonew.css";
-@import "http://webfonts.ru/import/neris.css";
-@import "http://webfonts.ru/import/kelson.css";
-
         .top-nav ul { list-style: none;}
         .top-nav ul li { display: inline-block;}
          .top-nav .children { padding: 20px; display:none; position: absolute; top: 50px; width: 400px; background: rgba(0,0,0,0.3); }
          .top-nav .children { font-size: 18px;}
          #top-nav .visible { display: block;}
+         #skel-layers-hiddenWrapper { height: 0 !important; display: none !important;}
+
         </style>
     </head>
     <body>
