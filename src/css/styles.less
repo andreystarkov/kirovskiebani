@@ -12,11 +12,6 @@
 @import "http://webfonts.ru/import/archivonarrow.css";
 */
 
-@import "http://webfonts.ru/import/corki.css";
-@import "http://webfonts.ru/import/robotonew.css";
-@import "http://webfonts.ru/import/neris.css";
-@import "http://webfonts.ru/import/kelson.css";
-
 @sans-cond: 'Roboto Condensed New';
 @font-header: 'Corki';
 
@@ -32,7 +27,6 @@
 a { transition: 0.6s ease-in-out all; }
 
 html{
-    /* killing 300ms touch delay in IE */
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
@@ -205,8 +199,8 @@ tbody tr:nth-child(odd) {
 }
 
 .container, .paddings {
-    padding-top: 55px;
-    padding-bottom: 60px;
+    padding-top: 0.8em;
+    padding-bottom: 1em;
     color: #fd1c4bb;
     h1 { font-family: @font-header;}
     p { font-family: 'Neris'; font-style: normal; font-weight:200; }
@@ -359,7 +353,7 @@ section {
 .seven { margin-bottom: 15px; }
 
 .ip-logo {
-    color:#951f1c;
+    color: fade(@light, 10%);
     font-family: 'OfficinaSerifBoldC';
     font-size: 120px;
     display: inline-block;

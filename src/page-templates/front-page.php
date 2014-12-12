@@ -13,14 +13,12 @@
  */
 
 get_header(); ?>
-   <header id="slider-wrapper" class="large-header">
 
+   <header id="slider-wrapper" class="large-header">
         <div class="logo"><h1>Кировские бани</h1></div>
 
         <div id="nice-slider" class="nice-slider nice-slider-fullwidth">
-
         <ul class="itemwrap">
-
             <li class="current">
                 <div class="slider-caption caption-current">
                   <div class="wrp">
@@ -29,7 +27,6 @@ get_header(); ?>
                 </div>
                 <img src="<? echo get_template_directory_uri(); ?>/images/slides/fasad.jpg" alt="">
             </li>
-
             <li>
                 <div class="slider-caption">
                   <div class="wrp">
@@ -38,7 +35,6 @@ get_header(); ?>
                 </div>
                 <img src="<? echo get_template_directory_uri(); ?>/images/slides/hall1.jpg" alt="">
             </li>
-
             <li>
                 <div class="slider-caption">
                   <div class="wrp">
@@ -57,14 +53,11 @@ get_header(); ?>
                 <img src="<? echo get_template_directory_uri(); ?>/images/slides/5.jpg" alt="">
             </li>
         </ul>
-
         <nav>
             <a class="prev" href="#"><i class="fa fa-angle-left"></i></a>
             <a class="next" href="#"><i class="fa fa-angle-right"></i></a>
         </nav>
-
         </div>
-
     </header>
 
     <section class="section wooden-1" id="intro">
@@ -78,16 +71,15 @@ get_header(); ?>
     </div>
     </section>
 
-
     <section id="bani" class="section-header wooden-1">
         <header data-speed="10" data-type="background">
             <div class="overlay"></div>
             <div class="container">
                 <h2>Бани</h2>
                 <div class="buttons">
-                    <a href="#" class="button button-red">Отделение высшего разряда</a>
-                    <a href="#" class="button button-red">Отделение низшего разряда</a>
-                    <a href="#" class="button button-red">Душевые номера</a>
+                    <a href="/бани/отделение-высшего-разряда/" class="button button-red">Отделение высшего разряда</a>
+                    <a href="/бани/отделение-низшего-разряда/" class="button button-red">Отделение низшего разряда</a>
+                    <a href="/бани/душевые-номера/" class="button button-red">Душевые номера</a>
                 </div>
             </div>
         </header>
@@ -124,7 +116,7 @@ get_header(); ?>
             <div class="container">
                 <h2>Сауна</h2>
                 <div class="buttons">
-                    <a href="#" class="button button-red">Прайс-лист</a>
+                    <a href="/сауна/" class="button button-red">Подробнее о сауне</a>
                 </div>
             </div>
         </header>
@@ -160,11 +152,12 @@ get_header(); ?>
             <div class="container">
                 <h2>Доп. услуги</h2>
                 <div class="buttons">
-                    <a href="#" class="button button-red">Салон Шадэ</a>
-                    <a href="#" class="button button-red">Магазин</a>
-                    <a href="#" class="button button-red">Мойка тела</a>
-                    <a href="#" class="button button-red">Закасочная</a>
-                    <a href="#" class="button button-red">Душ Шарко</a>
+                    <a href="/дополнительные-услуги/салон-шадэ/" class="button button-red">Салон Шадэ</a>
+                    <a href="/дополнительные-услуги/магазин/" class="button button-red">Магазин</a>
+                    <a href="/дополнительные-услуги/мойка-тела/" class="button button-red">Мойка тела</a>
+                    <a href="/дополнительные-услуги/массаж/" class="button button-red">Массаж</a>
+                    <a href="/дополнительные-услуги/закусочная/" class="button button-red">Закусочная</a>
+                    <a href="/дополнительные-услуги/душ-шарко-от-кировских-бань/" class="button button-red">Душ Шарко</a>
                 </div>
             </div>
         </header>
