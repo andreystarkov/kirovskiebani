@@ -53,6 +53,24 @@
 								if( ev.target !== header ) return;
 								this.removeEventListener( animEndEventName, onEndHeaderAnimation );
 							}
+						    $('.fa-bars').tooltipster({
+							     animation: 'grow',
+							     delay: 700,
+							     touchDevices: false,
+							     trigger: 'custom',
+							     content: 'Нажмите сюда что бы открыть навигационное меню',
+							     maxWidth: 350, interactive:true, interactiveTolerance:1000, position: 'right'
+							 });
+
+						    $('.fa-bars').tooltipster('show', function(){
+						    	$('.toggle i').addClass('hey-you');
+						    	setTimeout(function() {
+						    		$('.fa-bars').tooltipster('hide', function(){
+						    			$('.toggle i').removeClass('hey-you');
+						    		});
+						    	}, 6000);
+						    });
+
 				            $('.slider-caption').each(function(){
 				                if($(this).hasClass('caption-current')){
 				                        $(this).css({display: 'block'});

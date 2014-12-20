@@ -68,12 +68,25 @@ get_header(); ?>
 
     <section class="section wooden-1" id="intro">
     <div class="container">
-    <div class="text">
-        <h1>Банно-оздоровительный комплекс «Кировские бани»</h1>
-        <p>Здесь вы найдете все, что необходимо, для прекрасного отдыха с пользой для здоровья.  Давно известно, что Баня - это не просто уникальное, а поистине
-        волшебное оздорови-тельное, восстанавливающее средство. В стенах нашего банного комплекса мы постарались воплотить лучшие традиции банной культуры.
-        </p>
-    </div>
+        <div class="text">
+            <h1 class="first-header">Банно-оздоровительный комплекс «Кировские бани»</h1>
+            <p>Здесь вы найдете все, что необходимо, для прекрасного отдыха с пользой для здоровья.  Давно известно, что Баня - это не просто уникальное, а поистине
+            волшебное оздорови-тельное, восстанавливающее средство. В стенах нашего банного комплекса мы постарались воплотить лучшие традиции банной культуры.
+            </p>
+            <h2 class="news-header"><i class="li_news icon"></i> Новости и акции</h2>
+            <div class="box-news clearfix">
+            <?php
+                $args = array( 'posts_per_page' => 3 );
+                $myposts = get_posts( $args );
+                foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                    <a class="news-item" href="<?php the_permalink(); ?>">
+                        <b class="news-title"><i class="li_pen icon"></i><?php the_title(); ?></b>
+                        <p class="news-content"><? the_content(); ?></p>
+                    </a>
+                <?php endforeach;
+                wp_reset_postdata();?>
+            </div>
+        </div>
     </div>
     </section>
 
@@ -93,31 +106,22 @@ get_header(); ?>
             <div class="text">
                     <p>Кировские бани — классическая русская баня в Оренбурге и, особенно полезна городским жителям, ведущим малоподвижный образ жизни. Она нормализует обмен веществ, лечит простудные заболевания, способствует выведению шлаков из организма. </p>
             </div>
-            <div class="paddings columns clearfix">
-                <div class="seven columns alpha">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/bani-1.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/bani-1thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
-                <div class="seven columns beta">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/bani-2.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/bani-2thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
-                <div class="seven columns omega">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/bani-3.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/bani-3thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
+            <div class="thumbs-grid">
+                <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/bani-1.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/bani-1thumb.jpg" alt="">
+                </a>
+                <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/bani-2.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/bani-2thumb.jpg" alt="">
+                </a>
+                <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/bani/hi/6.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/bani/hi/6t.jpg" alt="">
+                </a>
             </div>
         </div>
     </section>
 
     <section id="sauna" class="section-header wooden-1">
-        <header data-speed="10" data-type="background">
+        <header>
             <div class="overlay"></div>
             <div class="container">
                 <h2>Сауна</h2>
@@ -130,25 +134,17 @@ get_header(); ?>
             <div class="text">
                     <p>Сауна от «Кировских Бань» приглашает Вас насладиться домашней атмосферой и уютной обстановкой. Предлагаем Вам забыть на время о суете и динамике внешнего мира и погрузиться в полную релаксацию в наших стенах.</p>
             </div>
-            <div class="paddings columns clearfix">
-                <div class="seven columns alpha">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/sauna-1.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/sauna-1thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
-                <div class="seven columns beta">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/sauna-2.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/sauna-2thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
-                <div class="seven columns omega">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/sauna-3.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/sauna-3thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
+
+            <div class="thumbs-grid">
+                <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/sauna-1.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/sauna-1thumb.jpg" alt="">
+                </a>
+                <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/sauna/5.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/sauna/5t.jpg" alt="">
+                </a>
+                <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/sauna-3.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/sauna-3thumb.jpg" alt="">
+                </a>
             </div>
         </div>
     </section>
@@ -156,7 +152,7 @@ get_header(); ?>
         <header data-speed="10" data-type="background">
             <div class="overlay"></div>
             <div class="container">
-                <h2>Доп. услуги</h2>
+                <h2>Услуги</h2>
                 <div class="buttons">
                     <a href="/дополнительные-услуги/салон-шадэ/" class="button button-red">Салон Шадэ</a>
                     <a href="/дополнительные-услуги/магазин/" class="button button-red">Магазин</a>
@@ -171,52 +167,18 @@ get_header(); ?>
             <div class="text">
                     <p>Так вы всегда можете заказать дополнительные услуги, которые оказывают "Кировские бани" своим любимым посетителям. К ним относятся парикмахерская, магазин, закусочная, мойка тела и душ "Шарко".</p>
             </div>
-            <div class="paddings columns clearfix">
-                <div class="seven columns alpha">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/us-1.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/us-1thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
-                <div class="seven columns beta">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/us-2.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/us-2thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
-                <div class="seven columns omega">
-                    <a class="thumb" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/us-3.jpg">
-                        <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/us-3thumb.jpg" alt="">
-                        <div class="frame"></div>
-                    </a>
-                </div>
+            <div class="thumbs-grid">
+                <a class="tip" title="Наша продукция" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/etc/mag/6.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/etc/mag/6t.jpg" alt="">
+                </a>
+                <a class="tip" title="Парикмахерская &laquoШаде&raquo;" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/us-2.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/us-2thumb.jpg" alt="">
+                </a>
+                <a class="tip" title="Душ &laquoШарко&raquo;" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/us-3.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/us-3thumb.jpg" alt="">
+                </a>
             </div>
         </div>
     </section>
-<section id="contact" class="section-header building-1 wooden-1">
-    <header data-speed="10" data-type="background">
-        <div class="overlay"></div>
-        <div class="container">
-            <h2>Контакты</h2>
-        </div>
-    </header>
-    <div class="container text-right" id="box-contact">
-        <div class="text">
-            <p>Кировские бани это баннй комплекс для всей семьи: одновременно работают отделения с обновленными интерьерами для женжин и для мужчин, сауна, буфет, массажи, салон парикмахерская Шадэ.</p>
-            <div class="map">
-                <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=q-ai15yV_mUKIpsDXFKkLJXoSfStwRgo"></script>
-            </div>
-
-            <div class="information">
-                <div class="item phone">
-                    <i class="li_phone"></i> <b>77-98-31</b>
-                </div>
-                <div class="item location">
-                    <i class="li_location"></i> <b>Город Оренбург, улица Кирова, 39</b>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <?php get_footer(); ?>

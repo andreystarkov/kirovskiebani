@@ -2,15 +2,11 @@
     </div>
 
     <footer>
-        <nav>
-        <a href="#">О нас</a>
-        <a href="#">Контакты</a>
-        <a href="#box-bani">Бани</a>
-        <a href="#box-sauna">Сауна</a>
-        <a href="#">Дополнительные услуги</a>
-        <a href="#">Традиции</a>
+        <div class="container">
+        <div class="float-right copy">&copy; 2014 &laquoКировские бани&raquo;</div>
+        <div class="call-phone"><i class="li_phone"></i> <b>77-98-31</b></div>
         <a href="#slider-wrapper"><i class="fa fa-angle-up"></i></a>
-        </nav>
+        </div>
     </footer>
     <div id="menuContainer" style="display:none; visibility: hidden;">
     <?
@@ -21,6 +17,7 @@
     </div>
 
     <script src="<? echo get_template_directory_uri(); ?>/js/libs/jquery-1.11.1.min.js"></script>
+    <script src="<? echo get_template_directory_uri(); ?>/js/libs/jquery.tooltipster.min.js"></script>
     <script src="<? echo get_template_directory_uri(); ?>/js/libs/skel.min.js"></script>
     <script src="<? echo get_template_directory_uri(); ?>/js/libs/easing.1.3.js"></script>
     <script src="<? echo get_template_directory_uri(); ?>/js/libs/skel.min.js"></script>
@@ -56,7 +53,7 @@
                     large: {
                         media: '(max-width: 1280px)',
                         href: '<? echo get_template_directory_uri(); ?>/css/responsive/style-large.css',
-                        containers: 1100, grid: { gutters: ['1.5em', 0] }, viewport: { scalable: false }
+                        containers: 960, grid: { gutters: ['1.5em', 0] }, viewport: { scalable: false }
                     },
                     medium: {
                         media: '(max-width: 980px)',
