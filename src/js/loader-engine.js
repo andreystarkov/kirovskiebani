@@ -54,13 +54,24 @@
 								this.removeEventListener( animEndEventName, onEndHeaderAnimation );
 							}
 						    $('.fa-bars').tooltipster({
-							     animation: 'grow',
-							     delay: 700,
+							     animation: 'fall',
+							     delay: 700,theme: 'tooltipster-light',
 							     touchDevices: false,
+							     offsetX: 17,
+							     offsetY: -7,
 							     trigger: 'custom',
 							     content: 'Нажмите сюда что бы открыть навигационное меню',
 							     maxWidth: 350, interactive:true, interactiveTolerance:1000, position: 'right'
 							 });
+
+
+						    $('.nice-slider nav').waypoint(function(){
+
+						          $('.fa-bars').tooltipster('hide', function(){
+						            $('.toggle i').removeClass('hey-you');
+						          });
+
+						    });
 
 						    $('.fa-bars').tooltipster('show', function(){
 						    	$('.toggle i').addClass('hey-you');

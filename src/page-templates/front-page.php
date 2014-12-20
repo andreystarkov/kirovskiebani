@@ -15,6 +15,7 @@
 get_header(); ?>
    <header id="slider-wrapper" class="large-header main-header">
 
+
         <div class="logo"><h1>Кировские бани</h1></div>
 
         <div id="nice-slider" class="nice-slider nice-slider-fullwidth">
@@ -22,7 +23,7 @@ get_header(); ?>
         <ul class="itemwrap">
 
             <li class="current">
-                <div class="slider-caption caption-current">
+                <div style="display:none" class="slider-caption">
                   <div class="wrp">
                     <p>Предлагаем Вам забыть на время о суете и динамике внешнего мира и погрузиться в полную релаксацию.</p>
                   </div>
@@ -31,7 +32,7 @@ get_header(); ?>
             </li>
 
             <li>
-                <div class="slider-caption">
+                <div style="display:none" class="slider-caption">
                   <div class="wrp">
                     <p>Умелые руки высокопрофессиональных банщиков и массажистов приведут Ваше тело и дух в полный порядок.</p>
                   </div>
@@ -40,7 +41,7 @@ get_header(); ?>
             </li>
 
             <li>
-                <div class="slider-caption">
+                <div style="display:none" class="slider-caption">
                   <div class="wrp">
                     <p>Два отделения для отдыха, отделение высшего разряда и отделение нижнего разряда, душевыми,
                     бассейнами, и настоящими русскими парными</p>
@@ -49,7 +50,7 @@ get_header(); ?>
                 <img src="<? echo get_template_directory_uri(); ?>/images/slides/hall2.jpg" alt="">
             </li>
             <li>
-                <div class="slider-caption">
+                <div style="display:none" class="slider-caption">
                   <div class="wrp">
                     <p>Как только Вы войдёте сюда &mdash; ощутите ласкающий всё тело "лёгкий пар". Тут Вы прекрасно отдохнёте и попаритесь с веничком.</p>
                   </div>
@@ -59,6 +60,7 @@ get_header(); ?>
         </ul>
 
         <nav>
+            <a class="button-down" href="#intro"><i class="fa fa-angle-down"></i></a>
             <a class="prev" href="#"><i class="fa fa-angle-left"></i></a>
             <a class="next" href="#"><i class="fa fa-angle-right"></i></a>
         </nav>

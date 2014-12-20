@@ -6,15 +6,6 @@ $(function() {
 
     $('.tip').tooltipster({maxWidth: 400, animation: 'grow', position: 'bottom'});
 
-
-    $('.nice-slider nav').waypoint(function(){
-
-          $('.fa-bars').tooltipster('hide', function(){
-            $('.toggle i').removeClass('hey-you');
-          });
-
-    });
-
     $("br").remove();
     $('section').flowtype({minFont : 35});
     $('a', '.page_item_has_children').attr('rel', 'nofollow').attr('href', '#');

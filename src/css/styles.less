@@ -36,7 +36,7 @@ h2 { font-size: 1.2em; }
 .content p { font-size: 0.8em; }
 section h1 { font-size: 2.7em; }
 section h2 { font-size: 2.3em; }
-section header h2 { font-size: 2.1em; }
+section header h2 { font-size: 2.3em; }
 h1,h2,h3,h4,h5,h6,p { line-height: 1.25; }
 
 .container .text-shift p { font-size: 1.2em; line-height: 1.25; }
@@ -117,10 +117,55 @@ tbody tr:nth-child(odd) {
         background: fade(@darkbrown, 40%);
     }
 }
+.nice-slider nav { text-align: center; }
 
 #topPanel {
     .title { font-family: @sans; color: white; padding:5px;
     margin-left: 15px; font-size: 24px; font-weight: 200; height: 100%; }
+}
+
+@button-hover-bg: fade(darken(desaturate(@darkbrown, 5%),2%),85%);
+@button-hover-color: @light;
+
+.button-home {
+    display:inline-block;
+    text-decoration: none;
+    color: fade(@darkbrown, 40%);
+    position: fixed;
+    left: 120px;
+    top:10px;
+    i {
+        font-size:60px;
+        transition: 0.5s ease-in all;
+    }
+    &:hover {
+        i {
+            color: fade(@darkbrown, 90%);
+        }
+    }
+}
+.button-down {
+    z-index: 999999;
+    display:inline-block;
+    text-decoration: none;
+    i {
+        background: fade(@darkbrown, 20%);
+        border-radius: 80px;
+        padding: 8px 23px;
+        color: fade(#fff, 70%);
+        font-size: 90px;
+        font-weight:200;
+        transition: 0.7s ease-in-out all;
+    }
+    &:hover {
+        i {
+         //   .drop-shadow(0, 4px, 12px, 0.4);
+            .scale(1.1);
+            background: @button-hover-bg;
+            color: @button-hover-color;
+           text-shadow: 0 1px 6px @darkbrown;// darken(desaturate(#672d25, 5%),10%);
+        }
+    }
 }
 
 .current_page_parent { background: fade(desaturate(@light, 10%),10%); }
@@ -201,8 +246,8 @@ tbody tr:nth-child(odd) {
 }
 
 .container, .paddings {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 1.2em;
+    padding-bottom: 1.1em;
     color: #fd1c4bb;
     h1 { font-family: @font-header;}
     p { font-family: @sans; font-style: normal; font-weight:200; }
@@ -230,9 +275,16 @@ footer {
                 font-weight: 300;
                 margin-left: 20px;
                 .fa { font-size: 45px; }
+                &:hover {
+                    b { color: @yellow; }
+                    i { color: fade(@yellow, 70%); }
+                }
+                b,i { transition: 0.6s ease-in-out all; }
             }
-            .call-phone {
+            .item-info {
                 display:inline-block;
+                margin-left: 15px;
+                text-decoration: none;
                 i { color: fade(@light, 70%); font-size: 35px; margin-right:10px; }
                 b { color: @light; font-family: @sans-cond; font-weight: 200; font-size: 40px; }
             }
@@ -243,6 +295,7 @@ footer {
 
 section {
     header {
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.9);
         h2 {
             display: inline-block;
             color: fade(#eae5e2, 90%);
@@ -425,8 +478,8 @@ section {
             color: @light;
             margin-top:15px;
             font-weight: 200;
-            font-family: @sans-cond;
-            font-size: 1.5em;
+            font-family: @font-header;
+            font-size: 1.2em;
             margin-bottom:15px;
         }
         p {
@@ -446,8 +499,8 @@ section {
 }
 
 .thumbs-grid, .image-grid {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     width: 100%;
     display:block;
     text-align: left;
@@ -475,19 +528,21 @@ section {
                 transition: 0.6s ease-in-out all;
                 text-align:center;
                 i {
+                    transform: translate(70px, 200px) scale(0) rotate(90deg);
                     transition: 0.6s ease-in-out all;
-                    opacity:0;
+                    opacity:0.5;
                     margin-top:75px;
-                    color: fade(#fff, 80%);
+                    color: fade(#fff,90%);
                     text-shadow: 0 2px 8px fade(#000, 75%);
                     font-size: 90px;
                 }
             }
             &:hover{
                  .hover {
-                    box-shadow: inset 0 -5px 100px rgba(0,0,0,1);
-                    i { opacity: 1; }
+                    box-shadow: inset 0 -5px 130px rgba(0,0,0,2);
+                    i { opacity: 1; transform: translate(0, 0px) scale(1) rotate(0); }
                     }
+
                     box-shadow: 0px 2px 16px rgba(0,0,0,0.7);
                     border: 6px solid fade(@light, 40%);
             }
@@ -496,7 +551,7 @@ section {
 }
 
 .ip-header { text-align:center; }
-.wooden-1 { background: url(../images/bg/dw-1a.png) top center repeat; }
+.wooden-1 { background: url(../images/bg/dw-2c1.png) top center repeat; }
 .wooden-3 { background: url(../images/bg/dark-3.png) top center repeat; }
 .wooden-2 { background: url(../images/bg/wood-1c.png) top center repeat; }
 
@@ -567,9 +622,24 @@ section {
 
 // tooltips
 
+.tooltipster-light {
+    border-radius: 5px;
+    border-bottom: 2px solid darken(@light,10%);
+    box-shadow: 0 2px 12px fade(@darkbrown, 50%);
+    background: @light;
+    color: @darkbrown;
+    .tooltipster-content {
+        font-family: @sans;
+        font-size: 20px;
+        line-height: 23px;
+        padding: 8px 18px;
+        overflow: hidden;
+    }
+}
+
 .tooltipster-default {
     border-radius: 5px;
-    border-bottom: 4px solid darken(@tooltip-bg,17%);
+    border-bottom: 4px solid darken(@tooltip-bg,14%);
     box-shadow: 0 2px 12px fade(@darkbrown, 50%);
     background: @tooltip-bg;
     color: @tooltip-font-color;

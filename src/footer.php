@@ -4,9 +4,11 @@
     <footer>
         <div class="container">
         <div class="float-right copy">&copy; 2014 &laquoКировские бани&raquo;</div>
-        <div class="call-phone"><i class="li_phone"></i> <b>77-98-31</b></div>
-        <a href="#slider-wrapper"><i class="fa fa-angle-up"></i></a>
+        <div class="item-info"><i class="li_phone"></i> <b>77-98-31</b></div>
+        <a href="/контакты/" class="item-info"><i class="li_location"></i> <b>Как нас найти?</b></a>
+        <a href="#slider-wrapper" class="tip" tooltip="Наверх страницы"><i class="fa fa-angle-up"></i></a>
         </div>
+
     </footer>
     <div id="menuContainer" style="display:none; visibility: hidden;">
     <?
@@ -79,7 +81,7 @@
                     width: '100%',
                     height: 50,
                     html: '<div class="toggle left-panel" id="topPanel" data-action="toggleLayer" data-args="navPanel"><i class="fa fa-bars"></i>' +
-                    '<span class="title"></span></div>'
+                    '<span class="title"></span></div><a class="button-home tip" style="display:none" title="На главную страницу" href="/"><i class="fa fa-home"></i></a>'
                   },
                   navPanel: {
                     position: 'top-left',

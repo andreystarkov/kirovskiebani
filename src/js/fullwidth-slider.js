@@ -33,9 +33,9 @@ $(function() {
         function init() {
             showNav();
             changeEffect();
-            $('.slider-caption').each(function(){
-                $(this).transition({x: rand(-500, 500)+'px', y: rand(-500, 500)+'px', 'opacity': 0}, 1);
-            });
+         ///   $('.slider-caption').each(function(){
+         //       $(this).transition({x: rand(-500, 500)+'px', y: rand(-500, 500)+'px', 'opacity': 0}, 1);
+       //     });
             navNext.addEventListener( 'click', function( ev ) { ev.preventDefault(); clearInterval(rotateInterval); navigate( 'next' ); } );
             navPrev.addEventListener( 'click', function( ev ) { ev.preventDefault(); clearInterval(rotateInterval); navigate( 'prev' ); } );
         }
@@ -95,13 +95,13 @@ $(function() {
                 current = current > 0 ? current - 1 : itemsCount - 1;
             }
 
-            captionChange($('.slider-caption', currentItem));
+      //      captionChange($('.slider-caption', currentItem));
 
             var nextItem = items[ current ];
 
             var onEndAnimationCurrentItem = function() {
                 this.removeEventListener( animEndEventName, onEndAnimationCurrentItem );
-                var caption = $('.slider-caption', this);
+           //     var caption = $('.slider-caption', this);
 
                 classie.removeClass( this, 'current' );
                 classie.removeClass( this, dir === 'next' ? 'navOutNext' : 'navOutPrev' );
@@ -115,9 +115,9 @@ $(function() {
 
             var onEndAnimationNextItem = function() {
 
-                var caption = $('.slider-caption', this);
-                caption.css({display: 'block'});
-                caption.transition({ rotate: '0deg', rotateY: '0deg', rotateX: '0deg', scale: 1, opacity: 1, y: '0px', x: '0px'}, 700);
+        //        var caption = $('.slider-caption', this);
+      //          caption.css({display: 'block'});
+       //         caption.transition({ rotate: '0deg', rotateY: '0deg', rotateX: '0deg', scale: 1, opacity: 1, y: '0px', x: '0px'}, 700);
 
                 this.removeEventListener( animEndEventName, onEndAnimationNextItem );
                 classie.addClass( this, 'current' );
