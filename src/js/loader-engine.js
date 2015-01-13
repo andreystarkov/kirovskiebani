@@ -1,6 +1,6 @@
 
 (function() {
-
+	$('.ip-header').css({height: $(window).height()});
 	var support = { animations : Modernizr.cssanimations },
 		container = document.getElementById( 'ip-container' ),
 		header = container.querySelector( 'div.ip-header' ),
@@ -31,9 +31,12 @@
 			onEndInitialAnimation();
 		}
 	}
-
+    function isMobile() {
+		      try{ document.createEvent("TouchEvent"); return true; }
+		      catch(e){ return false; }
+	}
 	function startLoading() {
-		// simulate loading something..
+
 		var simulationFn = function(instance) {
 			var progress = 0,
 				interval = setInterval( function() {
@@ -41,7 +44,6 @@
 
 					instance.setProgress( progress );
 
-					// reached the end
 					if( progress === 1 ) {
 						classie.remove( container, 'loading' );
 						classie.add( container, 'loaded' );
@@ -53,6 +55,7 @@
 								if( ev.target !== header ) return;
 								this.removeEventListener( animEndEventName, onEndHeaderAnimation );
 							}
+							if( !(isMobile()) ){
 						    $('.fa-bars').tooltipster({
 							     animation: 'fall',
 							     delay: 700,theme: 'tooltipster-light',
@@ -60,10 +63,9 @@
 							     offsetX: 17,
 							     offsetY: -7,
 							     trigger: 'custom',
-							     content: 'Нажмите сюда что бы открыть навигационное меню',
+							     content: 'Нажмите сюда, что бы открыть меню',
 							     maxWidth: 350, interactive:true, interactiveTolerance:1000, position: 'right'
 							 });
-
 
 						    $('.nice-slider nav').waypoint(function(){
 
@@ -73,6 +75,8 @@
 
 						    });
 
+
+
 						    $('.fa-bars').tooltipster('show', function(){
 						    	$('.toggle i').addClass('hey-you');
 						    	setTimeout(function() {
@@ -81,13 +85,13 @@
 						    		});
 						    	}, 6000);
 						    });
-
-				            $('.slider-caption').each(function(){
+							}
+				        /*    $('.slider-caption').each(function(){
 				                if($(this).hasClass('caption-current')){
 				                        $(this).css({display: 'block'});
 				                        $(this).transition({ rotate: '0deg', rotateY: '0deg', rotateX: '0deg', scale: 1, opacity: 1, y: '0px', x: '0px'}, 700);
 				                }
-				            });
+				            }); */
 							classie.add( document.body, 'layout-switch' );
 							window.removeEventListener( 'scroll', noscroll );
 						};

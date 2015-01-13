@@ -1,0 +1,9 @@
+.thumbs-grid a { width: 45%; border-radius: 0;}
+.thumbs-grid { text-align: center; }
+.news-item { width: 100% !important; }
+.box-news { width: 100%; text-align: left; }
+.logo h1 { font-size: 4em;}
+.victory { padding: 10px 20px; font-size: 70px;}
+#nice-slider img { width: 150%; }
+/* #nice-slider { max-height: 500px;} */
+.button-down { display: none;}

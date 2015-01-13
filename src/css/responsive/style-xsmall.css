@@ -1,19 +1,26 @@
-.logo h1 { font-size: 50px; margin-top: 30px;}
+.logo h1 { font-size: 40px; margin-top: 30px; padding: 4px 8px; }
 .top-nav { display: none;}
 .slider-caption { padding: 10px 20px; right: 3%; top: 300px; max-width: 95%; width:95%; font-size: 20px; bottom: auto;}
 .slider-caption p { font-size: 20px;}
 .container .seven.columns { transform: scale(0.8); margin-left:-50px;}
 .container, .paddings { padding-top: 40px; padding-bottom: 40px;}
 .section-header { font-size: 40px;}
+.victory { padding: 10px 20px; font-size: 80px;}
 .information .item b { font-size: 25px; }
+.thumbs-grid a, .thumbs-grid img { width: 100%; border-radius: 0;}
 .information .item i { font-size: 25px;}
 .information .item { margin-top: 10px; margin-bottom: 5px; }
 #uslugi header { height: auto; max-height: 600px !important; }
-#navPanel ul li a, #navPanel ul li .dropDown { font-size: 17px;}
-.section-header h2, .section-header .overlay { font-size: 65px; display: block;}
+#navPanel ul li a, #navPanel ul li .dropDown { font-size: 22px;}
+.section-header h2, .section-header .overlay { font-size: 65px; }
 section header .buttons { max-width: 100%; width: 100%; text-align:center; margin-top: 20px;}
-#nice-slider { height: 420px !important;}
+section header { max-height: 500px; }
+
 .nice-slider nav .next i, .nice-slider nav .prev i { font-size: 60px;}
 footer { height: 250px; }
+#nice-slider img { width: 270%; }
 footer nav { left: 0; right: 0; bottom: 50px; width: 95%;}
 footer nav a {display: inline-block; margin: 6px;}
+.button-down { display: none;}
+#imagelightbox { width: 100%; }
+footer b, footer i, footer div { font-size: 20px;}

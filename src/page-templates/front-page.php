@@ -15,6 +15,10 @@
 get_header(); ?>
    <header id="slider-wrapper" class="large-header main-header">
 
+        <div class="bubbles-wrapper" id="bubbles">
+            <canvas id="bubbles-canvas">
+            </canvas>
+        </div>
 
         <div class="logo"><h1>Кировские бани</h1></div>
 
@@ -28,7 +32,7 @@ get_header(); ?>
                     <p>Предлагаем Вам забыть на время о суете и динамике внешнего мира и погрузиться в полную релаксацию.</p>
                   </div>
                 </div>
-                <img src="<? echo get_template_directory_uri(); ?>/images/slides/fasad.jpg" alt="">
+                <img src="<? echo get_template_directory_uri(); ?>/images/slides/fasad1c.jpg" alt="">
             </li>
 
             <li>
@@ -48,14 +52,6 @@ get_header(); ?>
                   </div>
                 </div>
                 <img src="<? echo get_template_directory_uri(); ?>/images/slides/hall2.jpg" alt="">
-            </li>
-            <li>
-                <div style="display:none" class="slider-caption">
-                  <div class="wrp">
-                    <p>Как только Вы войдёте сюда &mdash; ощутите ласкающий всё тело "лёгкий пар". Тут Вы прекрасно отдохнёте и попаритесь с веничком.</p>
-                  </div>
-                </div>
-                <img src="<? echo get_template_directory_uri(); ?>/images/slides/5.jpg" alt="">
             </li>
         </ul>
 
@@ -83,7 +79,7 @@ get_header(); ?>
                 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
                     <a class="news-item" href="<?php the_permalink(); ?>">
                         <b class="news-title"><i class="li_pen icon"></i><?php the_title(); ?></b>
-                        <p class="news-content"><? the_content(); ?></p>
+                        <p class="news-content"><? the_excerpt(); ?></p>
                     </a>
                 <?php endforeach;
                 wp_reset_postdata();?>
@@ -92,14 +88,14 @@ get_header(); ?>
     </div>
     </section>
 
-    <section id="bani" class="section-header wooden-1">
+    <section id="bani" class="section-header wooden-2">
         <header data-speed="10" data-type="background">
             <div class="overlay"></div>
             <div class="container">
                 <h2>Бани</h2>
                 <div class="buttons">
                     <a href="/бани/отделение-высшего-разряда/" class="button button-red">Отделение высшего разряда</a>
-                    <a href="/бани/отделение-низшего-разряда/" class="button button-red">Отделение низшего разряда</a>
+                    <a href="/бани/отделение-низшего-разряда/" class="button button-red">Отделение общего разряда</a>
                     <a href="/бани/душевые-номера/" class="button button-red">Душевые номера</a>
                 </div>
             </div>
@@ -141,8 +137,8 @@ get_header(); ?>
                 <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/sauna-1.jpg">
                     <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/sauna-1thumb.jpg" alt="">
                 </a>
-                <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/sauna/5.jpg">
-                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/sauna/5t.jpg" alt="">
+                <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/sauna/2.jpg">
+                    <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/sauna/2t.jpg" alt="">
                 </a>
                 <a data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/sauna-3.jpg">
                     <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/photo/sauna-3thumb.jpg" alt="">
@@ -151,7 +147,7 @@ get_header(); ?>
         </div>
     </section>
     <section id="uslugi" class="section-header wooden-1">
-        <header data-speed="10" data-type="background">
+        <header data-speed="100" data-type="background">
             <div class="overlay"></div>
             <div class="container">
                 <h2>Услуги</h2>
@@ -170,7 +166,7 @@ get_header(); ?>
                     <p>Так вы всегда можете заказать дополнительные услуги, которые оказывают "Кировские бани" своим любимым посетителям. К ним относятся парикмахерская, магазин, закусочная, мойка тела и душ "Шарко".</p>
             </div>
             <div class="thumbs-grid">
-                <a class="tip" title="Наша продукция" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/etc/mag/6.jpg">
+                <a class="tip" title="Наша продукция" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/etc/mag/6.jpg">
                     <div class="hover"><i class="fa fa-search"></i></div><img src="<? echo get_template_directory_uri(); ?>/images/etc/mag/6t.jpg" alt="">
                 </a>
                 <a class="tip" title="Парикмахерская &laquoШаде&raquo;" data-lb="lightbox" href="<? echo get_template_directory_uri(); ?>/images/photo/us-2.jpg">

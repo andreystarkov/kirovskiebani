@@ -29,14 +29,16 @@
     <script src="<? echo get_template_directory_uri(); ?>/js/libs/waypoints.min.js"></script>
     <script src="<? echo get_template_directory_uri(); ?>/js/libs/flowtype.js"></script>
     <script src="<? echo get_template_directory_uri(); ?>/js/libs/imagelightbox.min.js"></script>
+    <script src="<? echo get_template_directory_uri(); ?>/js/libs/jquery.nanoscroller.min.js"></script>
     <script src="<? echo get_template_directory_uri(); ?>/js/fullwidth-slider.js"></script>
     <script src="<? echo get_template_directory_uri(); ?>/js/main.js"></script>
     <script src="<? echo get_template_directory_uri(); ?>/js/init.js"></script>
-
+      <script src="<? echo get_template_directory_uri(); ?>/js/bubbles.js"></script>
+        <script src="<? echo get_template_directory_uri(); ?>/js/rAF.js"></script>
     <script>
     (function($) {
 
-        $('#menuContainer .page_item_has_children').each(function(){
+        $('#menuContainer .menu-item-has-children').each(function(){
             $('a', this).first().attr('href', '#');
             $('a', this).first().replaceWith( "<div class='dropDown'>" + $('a', this).first().text() + " <i class='fa fa-angle-down'></i></div>" );
         });
@@ -97,9 +99,10 @@
                 }
               }
         });
-
+          $('#navPanel').nanoScroller({
+            preventPageScrolling: true
+          });
         $(function() {
-
 
         });
 
@@ -107,7 +110,6 @@
     </script>
     <script src="<? echo get_template_directory_uri(); ?>/js/pathLoader.js"></script>
         <script src="<? echo get_template_directory_uri(); ?>/js/loader-engine.js"></script>
-      <!--  <script src="<? echo get_template_directory_uri(); ?>/js/bubbles.js"></script> -->
-        <script src="<? echo get_template_directory_uri(); ?>/js/rAF.js"></script>
+
     </body>
 </html>

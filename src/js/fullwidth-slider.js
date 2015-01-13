@@ -27,12 +27,13 @@ $(function() {
         isAnimating = false,
         rotateTime = 12000;
 
-        var effects = ["fxSoftScale", "fxSnapIn","fxLetMeIn","fxStickIt","fxArchiveMe","fxVGrowth", "fxSlideBehind","fxSoftPulse", "fxCliffDiving", "fxPressAway"];
+        var effects = ["fxSnapIn","fxLetMeIn","fxStickIt","fxSoftPulse", "fxCliffDiving", "fxPressAway"];
         var rotateInterval = setInterval(function(){autoInterval()},rotateTime);
 
         function init() {
             showNav();
             changeEffect();
+            //"fxSoftScale", "fxSnapIn","fxLetMeIn","fxStickIt","fxArchiveMe","fxVGrowth", "fxSlideBehind","fxSoftPulse", "fxCliffDiving", "fxPressAway"
          ///   $('.slider-caption').each(function(){
          //       $(this).transition({x: rand(-500, 500)+'px', y: rand(-500, 500)+'px', 'opacity': 0}, 1);
        //     });
