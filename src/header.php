@@ -12,25 +12,15 @@
         <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/lineicons/style.css">
         <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/officina/fonts.css">
         <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/agora/italic.css">
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/agora/normal.css">
+        <link rel="styleheet" href="<? echo get_template_directory_uri(); ?>/fonts/agora/normal.css">
         <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/hagincaps/font.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/lineicons/style.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/normalize.css">
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/fullwidth-slider.css">
-
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/tooltipster.css">
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/lightbox.css">
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/animate.min.css">
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/loader-effect-1.css">
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/main.css">
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/styles.css">
+        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/css/all.css">
 
         <!-- <link rel="stylesheet/less" type="text/css" href="<? echo get_template_directory_uri(); ?>/css/fullwidth-slider.less" />
         <link rel="stylesheet/less" type="text/css" href="<? echo get_template_directory_uri(); ?>/css/styles.less" /> -->
-
-        <link rel="stylesheet" href="<? echo get_template_directory_uri(); ?>/fonts/lineicons/style.css">
-
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
         <script src="<? echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.8.3.min.js"></script>
         <!-- <script src="<? echo get_template_directory_uri(); ?>/js/vendor/less.min.js"></script> -->
